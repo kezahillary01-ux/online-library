@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "password": "$2a$10$UIiDj4oaE5mR3drQd0zUAe3Cne5VguBRjBml//AXYn3MuEpsBFP12",
+    "role": "admin",
+    "borrowedBooks": []
+  },
+  {
+    "id": 2,
+    "username": "user1",
+    "password": "$2a$10$FD2F2epxYyXfRIbiS9h0lOEogCjgQMeqo34Au2meYDkndRdEPuTGa",
+    "role": "user",
+    "borrowedBooks": []
+  }
+]
+

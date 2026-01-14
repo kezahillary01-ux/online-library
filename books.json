@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "genre": "Classic",
+    "available": true,
+    "borrowedBy": null
+  },
+  {
+    "id": 2,
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "genre": "Classic",
+    "available": true,
+    "borrowedBy": null
+  },
+  {
+    "id": 3,
+    "title": "1984",
+    "author": "George Orwell",
+    "genre": "Dystopian",
+    "available": true,
+    "borrowedBy": null
+  },
+  {
+    "id": 4,
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "genre": "Romance",
+    "available": true,
+    "borrowedBy": null
+  },
+  {
+    "id": 5,
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "genre": "Coming-of-age",
+    "available": true,
+    "borrowedBy": null
+  }
+]
