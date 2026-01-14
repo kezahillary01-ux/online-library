@@ -1,82 +1,47 @@
 {
-  "name": "is-number",
-  "description": "Returns true if a number or string value is a finite number. Useful for regex matches, parsing, user input, etc.",
-  "version": "7.0.0",
-  "homepage": "https://github.com/jonschlinkert/is-number",
-  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "name": "bcryptjs",
+  "description": "Optimized bcrypt in plain JavaScript with zero dependencies. Compatible to 'bcrypt'.",
+  "version": "2.4.3",
+  "author": "Daniel Wirtz <dcode@dcode.io>",
   "contributors": [
-    "Jon Schlinkert (http://twitter.com/jonschlinkert)",
-    "Olsten Larck (https://i.am.charlike.online)",
-    "Rouven Weßling (www.rouvenwessling.de)"
+    "Shane Girish <shaneGirish@gmail.com> (https://github.com/shaneGirish)",
+    "Alex Murray <> (https://github.com/alexmurray)",
+    "Nicolas Pelletier <> (https://github.com/NicolasPelletier)",
+    "Josh Rogers <> (https://github.com/geekymole)",
+    "Noah Isaacson <noah@nisaacson.com> (https://github.com/nisaacson)"
   ],
-  "repository": "jonschlinkert/is-number",
+  "repository": {
+    "type": "url",
+    "url": "https://github.com/dcodeIO/bcrypt.js.git"
+  },
   "bugs": {
-    "url": "https://github.com/jonschlinkert/is-number/issues"
-  },
-  "license": "MIT",
-  "files": [
-    "index.js"
-  ],
-  "main": "index.js",
-  "engines": {
-    "node": ">=0.12.0"
-  },
-  "scripts": {
-    "test": "mocha"
-  },
-  "devDependencies": {
-    "ansi": "^0.3.1",
-    "benchmark": "^2.1.4",
-    "gulp-format-md": "^1.0.0",
-    "mocha": "^3.5.3"
+    "url": "https://github.com/dcodeIO/bcrypt.js/issues"
   },
   "keywords": [
-    "cast",
-    "check",
-    "coerce",
-    "coercion",
-    "finite",
-    "integer",
-    "is",
-    "isnan",
-    "is-nan",
-    "is-num",
-    "is-number",
-    "isnumber",
-    "isfinite",
-    "istype",
-    "kind",
-    "math",
-    "nan",
-    "num",
-    "number",
-    "numeric",
-    "parseFloat",
-    "parseInt",
-    "test",
-    "type",
-    "typeof",
-    "value"
+    "bcrypt",
+    "password",
+    "auth",
+    "authentication",
+    "encryption",
+    "crypt",
+    "crypto"
   ],
-  "verb": {
-    "toc": false,
-    "layout": "default",
-    "tasks": [
-      "readme"
-    ],
-    "related": {
-      "list": [
-        "is-plain-object",
-        "is-primitive",
-        "isobject",
-        "kind-of"
-      ]
-    },
-    "plugins": [
-      "gulp-format-md"
-    ],
-    "lint": {
-      "reflinks": true
-    }
+  "main": "index.js",
+  "browser": "dist/bcrypt.js",
+  "dependencies": {},
+  "devDependencies": {
+    "testjs": "~1",
+    "closurecompiler": "~1",
+    "metascript": "~0.18",
+    "bcrypt": "latest",
+    "utfx": "~1"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "node node_modules/testjs/bin/testjs",
+    "build": "node scripts/build.js",
+    "compile": "node node_modules/closurecompiler/bin/ccjs dist/bcrypt.js --compilation_level=SIMPLE_OPTIMIZATIONS --create_source_map=dist/bcrypt.min.map > dist/bcrypt.min.js",
+    "compress": "gzip -c -9 dist/bcrypt.min.js > dist/bcrypt.min.js.gz",
+    "make": "npm run build && npm run compile && npm run compress && npm test"
   }
 }
